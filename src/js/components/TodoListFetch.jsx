@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 
 
 export const TodoListFetch = () => {
-  const baseURL = 'https://playground.4geeks.com/todo';
+  const host = 'https://playground.4geeks.com/todo';
   const user = 'spain-108';
 
   const [ newTask, setNewTask ] = useState('');
   const [ editTask, setEditTask ] = useState('');
   const [ editCompleted, setEditCompleted ] = useState()
-  const [ todos, setTodos ] = useState([]);
-  const [ editTodo, setEditTodo ] = useState({})
   const [ isEdit, setIsEdit ] = useState(false);
+  const [ editTodo, setEditTodo ] = useState({})
+  const [ todos, setTodos ] = useState([]);
 
   const handleNewTaskd = event => setNewTask(event.target.value);
   const handleEditTask = event => setEditTask(event.target.value);
